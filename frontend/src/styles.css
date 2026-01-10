@@ -1,0 +1,66 @@
+body {
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 320px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.options button {
+  background: rgba(255,255,255,0.3);
+}
+
+.selected {
+  background: white !important;
+  color: black;
+}
+
+.horoscope {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.link {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  opacity: 0.8;
+}

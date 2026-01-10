@@ -1,9 +1,27 @@
+import { useState } from "react";
+import Auth from "./components/Auth";
+import Survey from "./components/Survey";
+import Horoscope from "./components/Horoscope";
+import "./styles.css";
+
 function App() {
+  const [user, setUser] = useState(null);
+  const [surveyData, setSurveyData] = useState(null);
+
+  if (!user) {
+    return <Auth onAuth={setUser} />;
+  }
+
+  if (!surveyData) {
+    return <Survey onSubmit={setSurveyData} user={user} />;
+  }
+
   return (
-    <div>
-      <h1>CS98 Hack-a-Thing</h1>
-      <p>Hello from our React app!</p>
-    </div>
+    <Horoscope
+      user={user}
+      surveyData={surveyData}
+      onRestart={() => setSurveyData(null)}
+    />
   );
 }
 
